@@ -1,2 +1,2 @@
-# The-Shisher
-A Matteo Renzi English player --> http://ftruzzi.github.io/The-Shisher/
+# The-Munizer
+A pussy-in-the-ass music player
