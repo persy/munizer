@@ -9,16 +9,16 @@ var bgmusic = [
 
 var combos = [
 	{key: 32, file: "ho_la_fica_nel_culo", desc: "HO LA FICA NEL CULO CHE MI BOLLE DENTRO"}, //spacebar
-	{key: 81, file: "aaahhhaaahhh", desc: "AAAAAH AHHHH AHHH", alt_file: "#", alt_desc: "#"}, //Q
-	{key: 87, file: "adesso_invece", desc: "ADESSO INVECE SCOPO DI MENO", alt_file: "#", alt_desc: "#"}, //W
-	{key: 69, file: "basta_basta_basta", desc: "BASTA BASTA BASTAAA", alt_file: "#", alt_desc: "#"}, //E
+	{key: 81, file: "aaahhhaaahhh", desc: "AAAAAH AHHHH AHHH", alt_file: "dipre_per_il_sociale", }, //Q
+	{key: 87, file: "adesso_invece", desc: "ADESSO INVECE SCOPO DI MENO", alt_file: "monella", }, //W
+	{key: 69, file: "basta_basta_basta", desc: "BASTA BASTA BASTAAA", alt_file: "satto",}, //E
 	{key: 82, file: "con_due_mazze_tante", desc: "CON DUE MA-MAZZE TANTE CHE NE SO"}, //R
 	{key: 88, file: "importante_e_che_siano_enormi", desc: "L'IMPORTANTE È CHE SIANO ENORMI"}, //X
-	{key: 65, file: "io_vi_ammazzo", desc: "IO MI AMMAZZO! IO MI AMMAZZO CAZZO!", alt_file: "#"}, //A
-	{key: 83, file: "ma_io_mi_spoglio_qui_in_diretta", desc: "MA IO MI SPOGLIO QUI IN DIRETTA!", alt_file: "#"}, //S
+	{key: 65, file: "io_vi_ammazzo", desc: "IO MI AMMAZZO! IO MI AMMAZZO CAZZO!", alt_file: "sono_nata_debole", }, //A
+	{key: 83, file: "ma_io_mi_spoglio_qui_in_diretta", desc: "MA IO MI SPOGLIO QUI IN DIRETTA!", alt_file: "sono_un_ragazzo_carino", }, //S
 	{key: 68, file: "miei_culetti", desc: "I MIEI CULETTI! I MIEI CULETTI D'ORO"}, //D
 	{key: 79, file: "non_ci_sono_parchi_gay", desc: "MA NON CI SONO PARCHI GAY O ETERO PERCHÉ?"}, //O
-	{key: 90, file: "sbocchinare_al_massimo", desc: "SBOCCHINARE AL MASSIMO", alt_file: "#"}, //Z
+	{key: 90, file: "sbocchinare_al_massimo", desc: "SBOCCHINARE AL MASSIMO", alt_file: "lezzo",}, //Z
 	{key: 67, file: "succhio_cazzi", desc: "SUCCHIO CAZZI"}, //C
 	{key: 85, file: "tatatata1", desc: "TA TA TA TA TA TA"}, //U
 	{key: 73, file: "telefonatemi_citofonatemi", desc: "TELEFONATEMI CITOFONATEMI"}, //I
@@ -28,7 +28,7 @@ var combos = [
 	{key: 75, file: "voglio_essere_strastuprata", desc: "VOGLIO ESSERE STRASTUPRATA A SANGUE!"}, //K
 	{key: 80, file: "volete_a_venirmi", desc: "VOLETE VENIRE A STUPRARMI A VIOLENTARMI"}, //P
 	{key: 77, file: "volete_che_mi_ammazzo", desc:"VOLETE CHE MI AMMAZZO? VOLETE CHE MI AMMAZZO?"}, //M
-	{key: 78, file: "vi_offro_un_caffe", desc:"VI OFFRO UN CAFFÉ! VI OFFRO ME STESSA!"}, //N
+	{key: 78, file: "vi_offro_un_caffe", desc:"VI OFFRO UN CAFFè VI OFFRO ME STESSA"}, //N
 	{key: 86, file: "non_ci_sono_piu", desc:"NON CI SONO PIÙ GLI UOMINI DI UNA VOLTA!"},
 	{key: 71, file: bgmusic[currentbg].file, desc:String.fromCharCode(9835)}
 ];
@@ -61,7 +61,7 @@ $(document).ready(function(){
 	if(!isChrome && !isSafari){
 		$(".letter").css({
 			'font-family': 'Verdana'
-		})		
+		})
 	}
 });
 
@@ -76,7 +76,7 @@ $(document).keydown(function(e){
 });
 
 $(document).keyup(function(e){
-	
+
 	if(e.which==18 && alt && altPressed){
 		e.preventDefault();
 		altKeys();
@@ -123,7 +123,7 @@ function altKeys(){
 		$("#effects").removeClass("option").addClass("out");
 
 		$("#prev").html("F").removeClass("special").removeClass("red");
-		
+
 		$("#playbutt").html("G").removeClass("special").removeClass("red").parent().removeClass("special_toggle");
 
 		$("#next").html("H").removeClass("special").removeClass("red");
@@ -228,7 +228,7 @@ function process(key){
 					setTimeout(function(){
 						key.removeClass("special_toggle");
 					}, 100);
-			
+
 				break;
 
 			case 8680:
@@ -246,7 +246,7 @@ function process(key){
 				setTimeout(function(){
 					key.removeClass("special_toggle");
 				}, 100);
-				
+
 				break;
 
 			case 9654: //play
@@ -346,9 +346,9 @@ function scritte(desc){
 	        });
 
 	    	$(".scritta"+numero).fadeIn(Math.floor(Math.random()*1000)).delay(2000).fadeOut(500, function(){
-				
+
 				$(this).remove()
-					
+
 			});
 		}
 	}
