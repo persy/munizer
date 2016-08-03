@@ -28,7 +28,7 @@ var combos = [
 	{key: 75, file: "voglio_essere_strastuprata", desc: "VOGLIO ESSERE STRASTUPRATA A SANGUE!"}, //K
 	{key: 80, file: "volete_a_venirmi", desc: "VOLETE VENIRE A STUPRARMI A VIOLENTARMI"}, //P
 	{key: 77, file: "volete_che_mi_ammazzo", desc:"VOLETE CHE MI AMMAZZO? VOLETE CHE MI AMMAZZO?"}, //M
-	{key: 78, file: "vi_offro_un_caffe", desc:"#"}, //N
+	{key: 78, file: "vi_offro_un_caffe", desc:"VI OFFRO UN CAFFÉ! VI OFFRO ME STESSA!"}, //N
 	{key: 86, file: "non_ci_sono_piu", desc:"NON CI SONO PIÙ GLI UOMINI DI UNA VOLTA!"},
 	{key: 71, file: bgmusic[currentbg].file, desc:String.fromCharCode(9835)}
 ];
